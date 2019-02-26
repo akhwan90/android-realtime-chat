@@ -73,7 +73,10 @@ public class RegisterActivity extends AppCompatActivity {
                     final ProgressDialog pd = new ProgressDialog(RegisterActivity.this);
                     pd.setMessage("Loading...");
                     pd.show();
-
+                    /*Catatan:
+                    https://androidchatapp-12579.firebaseio.com adalah link dari realtime database firebase.
+                    Ganti sesuai dengan link databasemu.
+                    */
                     String url = "https://androidchatapp-12579.firebaseio.com/users.json";
 
                     StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>(){
