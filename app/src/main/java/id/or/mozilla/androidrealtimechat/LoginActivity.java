@@ -56,6 +56,10 @@ public class LoginActivity extends AppCompatActivity {
                     etPassword.setError("can't be blank");
                 }
                 else{
+                    /*Catatan:
+                    https://androidchatapp-12579.firebaseio.com adalah link dari realtime database firebase.
+                    Ganti sesuai dengan link databasemu.
+                    */
                     String url = "https://androidchatapp-12579.firebaseio.com/users.json";
                     final ProgressDialog pd = new ProgressDialog(LoginActivity.this);
                     pd.setMessage("Loading...");
