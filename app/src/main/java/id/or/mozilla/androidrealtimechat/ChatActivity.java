@@ -44,6 +44,10 @@ public class ChatActivity extends AppCompatActivity {
         scrollView = (ScrollView)findViewById(R.id.scrollView);
         tvUsername = findViewById(R.id.tvUserName);
         Firebase.setAndroidContext(this);
+        /*Catatan:
+        https://androidchatapp-12579.firebaseio.com adalah link dari realtime database firebase.
+        Ganti sesuai dengan link databasemu.
+        */
         reference1 = new Firebase("https://androidchatapp-12579.firebaseio.com/messages/" + UserDetails.username + "_" + UserDetails.chatWith);
         reference2 = new Firebase("https://androidchatapp-12579.firebaseio.com/messages/" + UserDetails.chatWith + "_" + UserDetails.username);
         tvUsername.setText(UserDetails.chatWith);
